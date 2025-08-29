@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Summary Card</title>
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: 'Hanken Grotesk';
+            src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+        }
+        body{
+            background-color: hsl(221, 100%, 96%);
+            box-sizing: border-box;
+            font-family: 'Hanken Grotesk', sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+        .container{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: min(36rem, 100%);
+            border-radius: 15px;
+            box-shadow: 0 3px 7px rgb(0, 0, 0, 0.1)
+        }
+        .con{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .card{
+            border-radius: 15px;
+            padding: 30px;
+            background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+            text-align: center;
+        }
+        .card h4{
+           color: hsl(241, 100%, 89%);
+           font-weight: 600;
+           margin-top: 0;
+        }
+        .circle{
+            width: 40%;
+            border-radius: 50%;
+            background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+            margin: auto;
+            padding: 30px;
+            margin-bottom: 0;
+        }
+        h1{
+            color: hsl(0, 0%, 100%);
+            margin-bottom: 0;
+            margin-top: 0;
+            font-size: 60px;
+        }
+        .score{
+            margin-top: -10;
+            color: hsl(241, 100%, 89%);
+            font-size: 13px;
+        }
+        h2{
+            margin-bottom: 0;
+            color: white;
+        }
+        .content{
+            margin-top: 10;
+            font-size: 15px;
+            color: hsl(241, 100%, 89%);
+            font-weight: 400;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .card1{
+            padding: 30px;
+        }
+        .card1 h4{
+            font-weight: 600;
+            margin-top: 0;
+        }
+        .summary{
+            display: flex;
+            margin-top: 15px;
+            border-radius: 10px;
+            padding-left: 10px;
+            gap: 10px;
+        }
+        .summary p {
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .overall{
+            color: hsl(224, 30%, 27%);
+            margin-left: 30%;
+        }
+        span{
+            color: rgb(48, 59, 90, 0.5);
+        }
+        #red{
+            background-color: rgb(255, 87, 87, 0.1);
+        }
+        #red .text{
+            color: rgb(255, 87, 87);
+        }
+        #orange{
+            background-color:  rgb(255, 176, 31, 0.1);
+        }
+        #orange .text{
+            color: rgb(255, 176, 31);
+        }
+        #green{
+            background-color: rgb(0, 189, 145, 0.1);
+        }
+        #green .text{
+            color: rgb(0, 189, 145);
+        }
+        #green .overall{
+            margin-left: 35%;
+        }
+        #blue{
+            background-color: rgb(17, 37, 212, 0.1);
+        }
+        #blue .text{
+            color: rgb(17, 37, 212);
+        }
+        #blue .overall{
+            margin-left: 35%;
+        }
+        button{
+            margin-top: 30;
+            width: 100%;
+            background-color: hsl(224, 30%, 27%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        button:hover{
+            background-color: hsl(241, 81%, 54%);
+        }
+        @media screen and (max-width: 767px){
+            .container{
+                margin-top: 0;
+            }
+            .con{
+                margin-bottom: 0;
+                display: inline;
+                margin-top: 0;
+            }
+            .card{
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="con">
+        <div class="card">
+            <h4>Your Result</h4>
+            <div class="circle">
+                <h1>76</h1>
+                <p class="score">of 100</p>
+            </div>
+            <h2>Great</h2>
+            <p class="content">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+        <div class="card1">
+            <h4>Summary</h4>
+            <div class="summary" id="red">
+                <img src="assets/images/icon-reaction.svg" alt="" id="reaction">
+                <p class="text">Reaction</p>
+                <p class="overall">80 <span>/ 100</span></p>
+            </div>
+            <div class="summary" id="orange">
+                <img src="assets/images/icon-memory.svg" alt="" id="memory">
+                <p class="text">Memory</p>
+                <p class="overall">92 <span>/ 100</span></p>
+            </div>
+            <div class="summary" id="green">
+                <img src="assets/images/icon-verbal.svg" alt="" id="verbal">
+                <p class="text">Verbal</p>
+                <p class="overall">61 <span>/ 100</span></p>
+            </div>
+            <div class="summary" id="blue">
+                <img src="assets/images/icon-visual.svg" alt="" id="visual">
+                <p class="text">Visual</p>
+                <p class="overall">72 <span>/ 100</span></p>
+            </div>
+            <button>Continue</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
