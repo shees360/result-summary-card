@@ -24,7 +24,7 @@ Mobile Design
 
 # Links
 
-- Repository Url -
+- Repository Url - [Repo Url](https://github.com/shees360/result-summary-card.git)
 - Live Url - 
 
 # Built with
@@ -35,4 +35,5 @@ Mobile Design
 # Author
 
 - Name: shees
+
 - Frontend-Mentor: [@shees360](https://www.frontendmentor.io/profile/shees360)
